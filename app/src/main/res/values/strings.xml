@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">PlanerWeselny</string>
+    <string name="planner_weselny">Planner weselny</string>
+    <string name="has_o">hasło</string>
+    <string name="zaloguj_si">Zaloguj się</string>
+    <string name="zarejestruj_si">Zarejestruj się</string>
+    <string name="login">Login</string>
+    <string name="zarejestrujsie" />
+    <string name="zarejestrujsi">zarejestruj się</string>
+    <string name="powr_t">Powrót</string>
+    <string name="e_mail">e-mail</string>
+    <string name="email">e-mail</string>
+    <string name="potwierd_has_o">potwierdź hasło</string>
+    <string name="login2">login</string>
+    <string name="e_mail1">e-mail</string>
 </resources>

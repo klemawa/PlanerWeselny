@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/plannerweselny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/planner_weselny"
+        android:textColor="@color/purple_200"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.087"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/loguser"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/inputlogin"
+        android:backgroundTint="@color/purple_500"
+        android:drawableStart="@drawable/usericon"
+        android:ems="10"
+        android:hint="@string/login"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plannerweselny"
+        tools:ignore="Autofill,LabelFor,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/loghaslo"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/inputlogin"
+        android:backgroundTint="@color/purple_500"
+        android:drawableStart="@drawable/securitypassword"
+        android:ems="10"
+        android:hint="@string/has_o"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loguser"
+        tools:ignore="Autofill,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/zalogujsie"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/zaloguj_si"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loghaslo"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/logzarejestrujsie"
+        android:layout_width="160dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/zarejestruj_si"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zalogujsie"
+        tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
