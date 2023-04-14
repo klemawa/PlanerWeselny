@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1"
-    tools:context=".LoginActivity">
+    android:background="@drawable/background2"
+    tools:context=".RegisterActivity">
+
 
     <TextView
         android:id="@+id/plannerweselny"
@@ -18,17 +18,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087"
+        app:layout_constraintVertical_bias="0.018"
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/loguser"
+        android:id="@+id/reglogin"
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/inputlogin"
         android:backgroundTint="@color/purple_500"
         android:drawableStart="@drawable/usericon"
@@ -47,10 +47,32 @@
         tools:ignore="Autofill,LabelFor,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/loghaslo"
+        android:id="@+id/regemail"
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/inputlogin"
+        android:backgroundTint="@color/purple_500"
+        android:drawableStart="@drawable/email"
+        android:ems="10"
+        android:hint="@string/e_mail1"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reglogin"
+        tools:ignore="Autofill,LabelFor,TextContrastCheck,TextFields" />
+
+    <EditText
+        android:id="@+id/reghaslo"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/inputlogin"
         android:backgroundTint="@color/purple_500"
         android:drawableStart="@drawable/securitypassword"
@@ -64,36 +86,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loguser"
+        app:layout_constraintTop_toBottomOf="@+id/regemail"
         tools:ignore="Autofill,TextContrastCheck" />
 
-    <Button
-        android:id="@+id/zalogujsie"
-        android:layout_width="289dp"
+    <EditText
+        android:id="@+id/reghaslo2"
+        android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginTop="68dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="@string/zaloguj_si"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loghaslo"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/logzarejestrujsie"
-        android:layout_width="160dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="84dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="@string/zarejestruj_si"
-        android:textColor="@color/white"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/inputlogin"
+        android:backgroundTint="@color/purple_500"
+        android:drawableStart="@drawable/securitypassword"
+        android:ems="10"
+        android:hint="@string/potwierd_has_o"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zalogujsie"
-        tools:ignore="TextSizeCheck,TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/reghaslo"
+        tools:ignore="Autofill,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/zarejestrujsie"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/zarejestrujsi"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/powrot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reghaslo2"
+        app:layout_constraintVertical_bias="0.406"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/powrot"
+        android:layout_width="142dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="192dp"
+        android:text="@string/powr_t"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck,TextSizeCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
