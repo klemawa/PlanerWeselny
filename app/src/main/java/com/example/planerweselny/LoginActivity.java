@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),  "Uzupełnij dane!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    if(db.Login(nazwauzyt,haslo)==1) {
+                    if(db.login(nazwauzyt,haslo)==1) {
                         Toast.makeText(getApplicationContext(), "Zalogowano się", Toast.LENGTH_SHORT).show();
                         SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedpreferences.edit();

@@ -27,15 +27,15 @@ public class BazaDanych  extends SQLiteOpenHelper {
     }
     public void register(String username, String email, String password){
         ContentValues cv = new ContentValues();
-        cv.put("nazwa użytkownika", username);
-        cv.put("e-mail", email);
-        cv.put("hasło", password);
+        cv.put("username", username);
+        cv.put("email", email);
+        cv.put("password", password);
         SQLiteDatabase db = getWritableDatabase();
         db.insert("users", null, cv);
         db.close();
     }
 
-    public int Login(String username , String password) {
+    public int login(String username , String password) {
         int wynik = 0;
         String[] str = new String[2];
         str[0] = username;
