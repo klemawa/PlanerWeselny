@@ -17,12 +17,12 @@
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="89dp"
-            android:layout_height="81dp"
+            android:layout_width="99dp"
+            android:layout_height="79dp"
             android:background="#00FFFFFF"
             android:foregroundTint="#C3FFFFFF"
             tools:ignore="SpeakableTextPresentCheck"
-            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteX="6dp"
             tools:layout_editor_absoluteY="140dp" />
 
         <TextView

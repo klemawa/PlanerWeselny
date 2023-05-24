@@ -13,4 +13,5 @@
     <string name="potwierd_has_o">potwierdź hasło</string>
     <string name="login2">login</string>
     <string name="e_mail1">e-mail</string>
+    <string name="texViewPlanuj">Planer</string>
 </resources>
