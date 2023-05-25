@@ -23,7 +23,7 @@ public class SzukajActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void przejscieKalendarz(View v){  ////przejście przyciskiem do okna kalendarz
-        Intent i = new Intent(this,PlanujActivity.class);
+        Intent i = new Intent(this,KalendarzActivity.class);
         startActivity(i);
     }
 
