@@ -6,24 +6,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class PlanujActivity extends AppCompatActivity {
+public class KalendarzActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_planuj);
+        setContentView(R.layout.activity_kalendarz);
     }
 
-    public void przejscieOdliczaj(View v){ //przejście przyciskiem do okna home
-        Intent i = new Intent(this,HomeActivity.class);
+    public void przejsciePlanuj(View v){ //przejście przyciskiem do okna planuj
+        Intent i = new Intent(this,PlanujActivity.class);
         startActivity(i);
     }
     public void przejscieSzukaj(View v){ //przejście przyciskiem do okna szukaj
         Intent i = new Intent(this,SzukajActivity.class);
         startActivity(i);
     }
-    public void przejscieKalendarz(View v){  ////przejście przyciskiem do okna kalendarz
-        Intent i = new Intent(this,KalendarzActivity.class);
+    public void przejscieOdliczaj(View v){  ////przejście przyciskiem do okna home
+        Intent i = new Intent(this,HomeActivity.class);
         startActivity(i);
     }
 

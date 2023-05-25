@@ -68,6 +68,7 @@
             android:layout_width="82dp"
             android:layout_height="match_parent"
             android:background="#00BDACE2"
+            android:onClick="przejsciePlanuj"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -75,6 +76,7 @@
             android:layout_width="82dp"
             android:layout_height="match_parent"
             android:background="#00BDACE2"
+            android:onClick="przejscieSzukaj"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -82,6 +84,7 @@
             android:layout_width="82dp"
             android:layout_height="match_parent"
             android:background="#008272A6"
+            android:onClick="przejscieKalendarz"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -89,6 +92,7 @@
             android:layout_width="82dp"
             android:layout_height="match_parent"
             android:background="#00BDACE2"
+            android:onClick="przejscieKonto"
             tools:ignore="SpeakableTextPresentCheck" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

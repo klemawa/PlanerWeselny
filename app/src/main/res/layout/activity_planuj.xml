@@ -5,23 +5,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/tloplanuj2"
+    android:onClick="przejscieKalendarz"
     tools:context=".PlanujActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="414dp"
-        android:layout_height="653dp"
+        android:layout_width="411dp"
+        android:layout_height="631dp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="87dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="353dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button11"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button10"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="67dp"
+            android:layout_marginBottom="18dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/button12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button7"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginEnd="67dp"
+            android:layout_marginBottom="353dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/button11"
+            app:layout_constraintTop_toBottomOf="@+id/button9"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="81dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="343dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button12"
+            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintTop_toBottomOf="@+id/button7"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="112dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/button8"
+            app:layout_constraintEnd_toStartOf="@+id/button7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginEnd="17dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/button11"
+            app:layout_constraintEnd_toStartOf="@+id/button9"
+            app:layout_constraintStart_toEndOf="@+id/button10"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="185dp"
-            android:layout_marginTop="61dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="184dp"
             android:layout_marginBottom="570dp"
             android:text="@string/texViewPlanuj"
@@ -50,6 +136,7 @@
             android:layout_height="102dp"
             android:layout_weight="1"
             android:background="#00FFFFFF"
+            android:onClick="przejscieOdliczaj"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -66,6 +153,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#00FFFFFF"
+            android:onClick="przejscieSzukaj"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -74,6 +162,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#00FFFFFF"
+            android:onClick="przejscieKalendarz"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -82,6 +171,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#00FFFFFF"
+            android:onClick="przejscieKonto"
             tools:ignore="SpeakableTextPresentCheck" />
     </RadioGroup>
 
