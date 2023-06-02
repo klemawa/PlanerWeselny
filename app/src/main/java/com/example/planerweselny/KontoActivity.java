@@ -25,6 +25,7 @@ public class KontoActivity extends AppCompatActivity {
         });
     }
 
+
     public void przejsciePlanuj(View v) {
         Intent i = new Intent(this, PlanujActivity.class);
         startActivity(i);
@@ -44,6 +45,7 @@ public class KontoActivity extends AppCompatActivity {
         Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
     }
+
 }
 
 
