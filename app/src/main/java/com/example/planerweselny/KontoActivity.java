@@ -1,20 +1,21 @@
 package com.example.planerweselny;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 public class KontoActivity extends AppCompatActivity {
-    TextView tv;
+    TextView tv, tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_konto);
         tv = findViewById(R.id.textView7);
+        tv1 = findViewById(R.id.textView6);
 
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,8 +24,15 @@ public class KontoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
+        tv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KontoActivity.this, UstawieniaActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     public void przejsciePlanuj(View v) {
         Intent i = new Intent(this, PlanujActivity.class);
@@ -45,9 +53,4 @@ public class KontoActivity extends AppCompatActivity {
         Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
     }
-
 }
-
-
-
-
