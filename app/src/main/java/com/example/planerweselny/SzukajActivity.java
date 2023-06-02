@@ -2,6 +2,7 @@ package com.example.planerweselny;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,8 @@ public class SzukajActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_szukaj);
+
+
     }
 
     public void przejsciePlanuj(View v){ //przejście przyciskiem do okna planuj
