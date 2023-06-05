@@ -17,12 +17,7 @@ public class UstawieniaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ustawienia);
 
         textViewClose = findViewById(R.id.textView9);
-        textViewClose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showConfirmationDialog();
-            }
-        });
+        textViewClose.setOnClickListener(v -> showConfirmationDialog());
     }
 
     private void showConfirmationDialog() {
