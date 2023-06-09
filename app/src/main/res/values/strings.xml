@@ -31,5 +31,5 @@
     <string name="checkbox6">Podwiązka ślubna - Czy zdecydowałaś sie na ten dodatek?</string>
     <string name="buttonglosuj">Zapisz</string>
     <string name="text">Określ budżet</string>
-
+    <string name="listagosci">Lista Gości</string>
 </resources>

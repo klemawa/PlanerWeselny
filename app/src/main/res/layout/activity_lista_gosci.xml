@@ -4,6 +4,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tlouniwersalne"
     tools:context=".ListaGosci">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="413dp"
+        android:layout_height="637dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="312dp"
+            android:layout_height="432dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginBottom="95dp"
+            android:background="#9B85CC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#651FFF"
+                    android:text="CheckBox" />
+
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#651FFF"
+                    android:text="CheckBox" />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="310dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/listagosci"
+            android:textAlignment="center"
+            android:textColor="#050505"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup7"
+        android:layout_width="409dp"
+        android:layout_height="94dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:onClick="przejscieOdliczaj"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button32"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:onClick="przejsciePlanuj"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:onClick="przejscieSzukaj"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:onClick="przejscieKalendarz"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button35"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:onClick="przejscieKonto"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

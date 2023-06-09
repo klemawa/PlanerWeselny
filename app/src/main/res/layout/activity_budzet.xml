@@ -22,13 +22,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="143dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="112dp"
             android:layout_marginEnd="144dp"
             android:text="@string/text"
             android:textColor="#0E0C0C"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,11 +38,11 @@
             android:layout_width="255dp"
             android:layout_height="93dp"
             android:layout_marginStart="77dp"
+            android:layout_marginTop="18dp"
             android:layout_marginEnd="7dp"
-            android:layout_marginBottom="433dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
 
             <EditText
                 android:id="@+id/editTextTextPersonName"
@@ -64,13 +65,29 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginTop="116dp"
-            android:layout_marginBottom="502dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="170dp"
             android:text="zł"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/radioGroup6"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="283dp"
+            android:layout_height="102dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="269dp"
+            android:fontFamily="sans-serif-black"
+            android:text="23 000 zł"
+            android:textAlignment="center"
+            android:textColor="#B5A9A9"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
