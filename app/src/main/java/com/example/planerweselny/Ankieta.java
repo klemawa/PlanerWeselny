@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class PlanujActivity extends AppCompatActivity {
+public class Ankieta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_planuj);
+        setContentView(R.layout.activity_ankieta);
     }
-
     public void przejscieOdliczaj(View v){ //przejście przyciskiem do okna home
         Intent i = new Intent(this,HomeActivity.class);
         startActivity(i);
@@ -26,13 +25,13 @@ public class PlanujActivity extends AppCompatActivity {
         Intent i = new Intent(this,KalendarzActivity.class);
         startActivity(i);
     }
-
+    public void przejsciePlanuj(View v){ //przejście przyciskiem do okna konto
+        Intent i = new Intent(this,PlanujActivity.class);
+        startActivity(i);
+    }
     public void przejscieKonto(View v){ //przejście przyciskiem do okna konto
         Intent i = new Intent(this,KontoActivity.class);
         startActivity(i);
     }
-    public void przejscieAnkieta(View v){ //przejście przyciskiem do okna konto
-        Intent i = new Intent(this,Ankieta.class);
-        startActivity(i);
-    }
+
 }

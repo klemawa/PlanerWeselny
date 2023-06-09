@@ -22,4 +22,13 @@
     <string name="wyloguj_si">Wyloguj się</string>
     <string name="button_13">Button 13</string>
     <string name="dark_mode">Dark Mode</string>
+    <string name="textankieta">Wypełnij Ankietę</string>
+    <string name="checkbox">Czy miałaś cos pożyczonego na ślubie</string>
+    <string name="checkbox2">Czy miałaś coś niebieskiego na ślubie i weselu</string>
+    <string name="checkbox3">Czy miałaś zawieszki/naklejki na butelki</string>
+    <string name="checkbox4">Czy miałaś plan stołów na sali weselnej</string>
+    <string name="checkbox5">Czy miałaś księge gości</string>
+    <string name="checkbox6">Podwiązka ślubna - Czy zdecydowałaś sie na ten dodatek?</string>
+    <string name="buttonglosuj">Zapisz</string>
+
 </resources>
