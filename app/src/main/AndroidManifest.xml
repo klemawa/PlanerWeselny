@@ -21,9 +21,6 @@
             android:name=".Ankieta"
             android:exported="false" />
         <activity
-            android:name=".QA"
-            android:exported="false" />
-        <activity
             android:name=".ListaZadan"
             android:exported="false" />
         <activity

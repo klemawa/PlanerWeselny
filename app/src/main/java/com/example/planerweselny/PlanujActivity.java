@@ -49,10 +49,7 @@ public class PlanujActivity extends AppCompatActivity {
         Intent i = new Intent(this,ListaZadan.class);
         startActivity(i);
     }
-    public void przejscieQA(View v){ //przejście przyciskiem do okna konto
-        Intent i = new Intent(this,QA.class);
-        startActivity(i);
-    }
+
     public void przejscieBudzet(View v) { //przejście przyciskiem do okna konto
         Intent i = new Intent(this, Budzet.class);
         startActivity(i);

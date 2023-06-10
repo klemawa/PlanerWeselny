@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="UnknownIdInLayout">
 
         <Button
             android:id="@+id/button2"
@@ -63,20 +64,61 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="264dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="505dp"
-        android:ems="10"
-        android:hint="@string/notatki"
-        android:inputType="textPersonName"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="410dp"
+        android:layout_height="641dp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editTextNote"
+            android:layout_width="250dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="146dp"
+            android:layout_marginEnd="80dp"
+            android:hint="Wprowadź notatkę"
+            app:layout_constraintBottom_toTopOf="@+id/button59"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <Button
+            android:id="@+id/button59"
+            android:layout_width="259dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="110dp"
+            android:background="#278E7ABA"
+            android:text="@string/notki"
+            app:layout_constraintBottom_toTopOf="@+id/listViewNotes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNote" />
+
+        <ListView
+            android:id="@+id/listViewNotes"
+            android:layout_width="306dp"
+            android:layout_height="107dp"
+            android:layout_below="@id/button59"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button59" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
