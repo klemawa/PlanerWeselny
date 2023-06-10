@@ -5,45 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/tlouniwersalne"
-    tools:context=".dodajGosci">
-
-    <RadioGroup
-        android:id="@+id/radioGroup9"
-        android:layout_width="281dp"
-        android:layout_height="145dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="65dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15">
-
-        <EditText
-            android:id="@+id/editTextTextPersonName3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/imie"
-            android:inputType="textPersonName"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/nazwisko"
-            android:inputType="textPersonName"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <CheckBox
-            android:id="@+id/checkBox9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:buttonTint="#651FFF"
-            android:text="@string/osobatow" />
-
-    </RadioGroup>
+    tools:context=".dodajZadanie">
 
     <RadioGroup
         android:id="@+id/radioGroup8"
@@ -100,36 +62,80 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </RadioGroup>
 
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="121dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="121dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="121dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/button42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
     <Button
-        android:id="@+id/button41"
-        android:layout_width="307dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="251dp"
+        android:id="@+id/button42"
+        android:layout_width="313dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="258dp"
         android:background="#278E7ABA"
         android:text="@string/buttonglosuj"
-        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup9" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime"
+        app:layout_constraintVertical_bias="0.285"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/textView15"
-        android:layout_width="131dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="45dp"
-        android:text="@string/listagosci2"
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="142dp"
+        android:text="@string/dod"
         android:textAlignment="center"
-        android:textColor="#0E0E0E"
+        android:textAllCaps="false"
+        android:textColor="#070707"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

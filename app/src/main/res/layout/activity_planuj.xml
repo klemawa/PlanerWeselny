@@ -75,7 +75,7 @@
                 android:layout_width="107dp"
                 android:layout_height="match_parent"
                 android:background="#00FFFFFF"
-                android:onClick="przejscieQA"
+                android:onClick="strona"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button

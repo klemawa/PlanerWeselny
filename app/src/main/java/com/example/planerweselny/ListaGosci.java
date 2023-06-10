@@ -33,4 +33,8 @@ public class ListaGosci extends AppCompatActivity {
         Intent i = new Intent(this,KontoActivity.class);
         startActivity(i);
     }
+    public void przejscieDodawanieGosci(View v){ //przejście przyciskiem do okna konto
+        Intent i = new Intent(this,dodajGosci.class);
+        startActivity(i);
+    }
 }

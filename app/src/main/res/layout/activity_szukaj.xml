@@ -79,44 +79,98 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
+    <TextView
+        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
-        android:layout_marginBottom="496dp"
-        android:backgroundTint="#171616"
-        android:drawableTint="#0E0E0E"
-        android:ems="10"
-        android:hint="@string/szukaj"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:shadowColor="#070505"
-        android:textColor="#070505"
-        android:textColorHighlight="#070505"
-        android:textColorHint="#070505"
-        android:textColorLink="#070505"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:autofillHints="" />
+        android:text="@string/szuk"
+        android:textColor="#0B0A0A"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nszuk2"
+        android:textAlignment="center"
+        android:textColor="#0B0A0A"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="302dp" />
 
     <Button
         android:id="@+id/button13"
-        android:layout_width="59dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginBottom="495dp"
-        android:background="#00FFFFFF"
-        android:foregroundTint="#008A5050"
-        app:icon="@android:drawable/ic_menu_search"
-        app:iconPadding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:text="@string/button_13" />
+        android:layout_width="62dp"
+        android:layout_height="58dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <Button
+        android:id="@+id/button43"
+        android:layout_width="63dp"
+        android:layout_height="56dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <Button
+        android:id="@+id/button44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <Button
+        android:id="@+id/button45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <Button
+        android:id="@+id/button46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <Button
+        android:id="@+id/button47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="277dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <Button
+        android:id="@+id/button48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <Button
+        android:id="@+id/button49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <Button
+        android:id="@+id/button50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="250dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

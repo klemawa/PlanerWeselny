@@ -32,4 +32,14 @@
     <string name="buttonglosuj">Zapisz</string>
     <string name="text">Określ budżet</string>
     <string name="listagosci">Lista Gości</string>
+    <string name="listagosci2">Dodaj gości</string>
+    <string name="listazadan">Lista zadań</string>
+    <string name="imie">Imię</string>
+    <string name="nazwisko">Nazwisko</string>
+    <string name="osobatow">Osoba towarzysząca</string>
+    <string name="dod">Dodaj zadanie</string>
+    <string name="planstolow">Plan stołów</string>
+    <string name="notatki">Notuj</string>
+    <string name="szuk">Katalog usług</string>
+    <string name="nszuk2">Katalog produktów</string>
 </resources>

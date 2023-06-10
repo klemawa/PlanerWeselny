@@ -3,6 +3,7 @@ package com.example.planerweselny;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -54,6 +55,11 @@ public class PlanujActivity extends AppCompatActivity {
     }
     public void przejscieBudzet(View v) { //przejście przyciskiem do okna konto
         Intent i = new Intent(this, Budzet.class);
+        startActivity(i);
+    }
+    public void strona(View v){
+        Uri u = Uri.parse("https://www.weselezklasa.pl/slubne-qa/");
+        Intent i = new Intent(Intent.ACTION_VIEW, u);
         startActivity(i);
     }
 
