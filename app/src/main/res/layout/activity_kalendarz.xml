@@ -27,8 +27,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="261dp"
-        android:layout_height="53dp"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
         android:layout_marginStart="75dp"
         android:layout_marginTop="47dp"
         android:layout_marginEnd="75dp"
@@ -42,9 +42,9 @@
         <Button
             android:id="@+id/previousButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:onClick="previousMonth"
-            android:text="<" />
+            android:text="@string/POP" />
 
         <TextView
             android:id="@+id/monthTextView"
@@ -55,10 +55,10 @@
 
         <Button
             android:id="@+id/nextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
             android:onClick="nextMonth"
-            android:text=">" />
+            android:text="@string/NEXT" />
 
     </LinearLayout>
 
@@ -67,8 +67,9 @@
         android:layout_width="268dp"
         android:layout_height="268dp"
         android:layout_marginStart="71dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="72dp"
-        android:layout_marginBottom="166dp"
+        android:layout_marginBottom="140dp"
         android:gravity="center"
         android:horizontalSpacing="1dp"
         android:numColumns="7"
@@ -77,7 +78,8 @@
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <RadioGroup
         android:id="@+id/radioGroup"

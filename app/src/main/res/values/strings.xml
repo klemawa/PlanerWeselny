@@ -43,4 +43,6 @@
     <string name="szuk">Katalog usług</string>
     <string name="nszuk2">Katalog produktów</string>
     <string name="notki">Dodaj notatkę</string>
+    <string name="NEXT">NEXT</string>
+    <string name="POP">PREVIOUS</string>
 </resources>
