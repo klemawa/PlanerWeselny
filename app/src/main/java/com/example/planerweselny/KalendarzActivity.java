@@ -1,18 +1,25 @@
 package com.example.planerweselny;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +31,9 @@ public class KalendarzActivity extends AppCompatActivity {
 
     private CalendarAdapter calendarAdapter;
     private TextView monthTextView;
+    private int selectedDay = -1;
+    private SharedPreferences sharedPreferences;
+    private ArrayAdapter<String> eventListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +46,22 @@ public class KalendarzActivity extends AppCompatActivity {
         gridView.setAdapter(calendarAdapter);
 
         updateMonthTextView();
+
+        ListView eventListView = findViewById(R.id.listView);
+        eventListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        eventListView.setAdapter(eventListAdapter);
+
+        sharedPreferences = getSharedPreferences("events", MODE_PRIVATE);
+
+        eventListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String event = eventListAdapter.getItem(position);
+                Toast.makeText(KalendarzActivity.this, event, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+
     private void updateMonthTextView() {
         DateFormatSymbols symbols = new DateFormatSymbols();
         String monthName = symbols.getMonths()[calendarAdapter.getMonth()];
@@ -104,22 +129,32 @@ public class KalendarzActivity extends AppCompatActivity {
                 dayOfMonth.setTextColor(Color.WHITE);
                 dayOfMonth.setText("");
             } else {
-                int day = position - getStartDay() + 1;
-                dayOfMonth.setBackgroundColor(Color.WHITE);
+                final int day = position - getStartDay() + 1;
+                dayOfMonth.setBackgroundColor(Color.GRAY);
                 dayOfMonth.setTextColor(Color.BLACK);
                 dayOfMonth.setText(String.valueOf(day));
 
                 if (day == currentDayOfMonth && month == calendar.get(Calendar.MONTH) && year == calendar.get(Calendar.YEAR)) {
                     dayOfMonth.setBackgroundColor(Color.MAGENTA);
                     dayOfMonth.setTextColor(Color.BLACK);
+                } else {
+                    dayOfMonth.setBackgroundColor(Color.GRAY);
+                    dayOfMonth.setTextColor(Color.BLACK);
+                }
+
+                // Sprawdzanie czy dla tego dnia jest zapisana informacja w SharedPreferences
+                String event = sharedPreferences.getString(String.valueOf(day), "");
+                if (!event.isEmpty()) {
+                    dayOfMonth.setBackgroundColor(Color.RED);
+                    dayOfMonth.setTextColor(Color.WHITE);
                 }
 
                 dayOfMonth.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int selectedDay = position - getStartDay() + 1;
-                        String message = "Selected Date: " + selectedDay + "/" + (month + 1) + "/" + year;
-                        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+                        selectedDay = day;
+                        notifyDataSetChanged();
+                        showInputDialog();
                     }
                 });
             }
@@ -127,7 +162,6 @@ public class KalendarzActivity extends AppCompatActivity {
             dayOfMonth.setGravity(Gravity.CENTER);
             return dayOfMonth;
         }
-
         private int getStartDay() {
             Calendar startCalendar = Calendar.getInstance();
             startCalendar.set(year, month, 1);
@@ -167,6 +201,58 @@ public class KalendarzActivity extends AppCompatActivity {
     }
 
 
+    private void showInputDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Informacje");
+
+        // Tworzenie widoku layoutu dla dialogu
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        builder.setView(layout);
+
+        // Pobieranie informacji dla wybranego dnia z SharedPreferences
+        String event = sharedPreferences.getString(String.valueOf(selectedDay), "");
+
+        // Tworzenie TextView dla wyświetlenia istniejących informacji
+        final TextView existingInfoTextView = new TextView(this);
+        existingInfoTextView.setText(event);
+        layout.addView(existingInfoTextView);
+
+        // Dodanie pola EditText do wprowadzania nowej informacji
+        final EditText input = new EditText(this);
+        layout.addView(input);
+
+        // Dodanie przycisku "Dodaj"
+        builder.setPositiveButton("Dodaj", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String newInfo = input.getText().toString();
+
+                // Aktualizacja istniejących informacji
+                String existingInfo = existingInfoTextView.getText().toString();
+                String updatedInfo = existingInfo.isEmpty() ? newInfo : existingInfo + ", " + newInfo;
+                existingInfoTextView.setText(updatedInfo);
+
+                // Zapisanie informacji w SharedPreferences
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(String.valueOf(selectedDay), updatedInfo);
+                editor.apply();
+
+                // Wyświetlanie zaznaczonego elementu
+                Toast.makeText(KalendarzActivity.this, "Informacja dodana dla dnia " + selectedDay, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Dodanie przycisku "Anuluj"
+        builder.setNegativeButton("Anuluj", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
+    }
     public void przejsciePlanuj(View v){ //przejście przyciskiem do okna planuj
         Intent i = new Intent(this,PlanujActivity.class);
         startActivity(i);
