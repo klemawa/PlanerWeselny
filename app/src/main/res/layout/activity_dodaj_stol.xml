@@ -5,36 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/tlouniwersalne"
-    tools:context=".dodajGosci">
+    tools:context=".dodajStol">
 
-    <RadioGroup
-        android:id="@+id/radioGroup9"
-        android:layout_width="281dp"
-        android:layout_height="145dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="65dp"
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="278dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/stol"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/checkboxContainer3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15">
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        tools:ignore="TouchTargetSizeCheck" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/imie"
-            android:inputType="textPersonName"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <CheckBox
-            android:id="@+id/checkBox9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:buttonTint="#651FFF"
-            android:text="@string/osobatow" />
-
-    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/checkboxContainer3"
+        android:layout_width="278dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button41"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"></LinearLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup8"
@@ -91,38 +94,35 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </RadioGroup>
 
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="137dp"
+        android:text="@string/stol2"
+        android:textAlignment="center"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button41"
         android:layout_width="307dp"
         android:layout_height="52dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="251dp"
+        android:layout_marginBottom="168dp"
         android:background="#278E7ABA"
         android:text="@string/buttonglosuj"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup9" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="131dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="45dp"
-        android:text="@string/listagosci2"
-        android:textAlignment="center"
-        android:textColor="#0E0E0E"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

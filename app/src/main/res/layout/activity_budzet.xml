@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tlouniwersalne"
+    android:background="@drawable/tlobudzet"
     tools:context=".Budzet">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,60 +33,64 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioGroup
-            android:id="@+id/radioGroup6"
-            android:layout_width="255dp"
-            android:layout_height="93dp"
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="230dp"
+            android:layout_height="44dp"
             android:layout_marginStart="77dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="7dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="29dp"
+            android:ems="10"
+            android:hint="@string/bud"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/button31"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10">
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="230dp"
-                android:layout_height="44dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/button31"
-                android:layout_width="251dp"
-                android:layout_height="41dp"
-                android:background="#278E7ABA"
-                android:text="@string/buttonglosuj"
-                tools:ignore="TouchTargetSizeCheck" />
-        </RadioGroup>
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="251dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="77dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginBottom="25dp"
+            android:background="#278E7ABA"
+            android:text="@string/buttonglosuj"
+            app:layout_constraintBottom_toTopOf="@+id/textView13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginEnd="66dp"
             android:text="zł"
-            app:layout_constraintStart_toEndOf="@+id/radioGroup6"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.276" />
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="283dp"
-            android:layout_height="102dp"
+            android:layout_width="306dp"
+            android:layout_height="105dp"
             android:layout_marginStart="65dp"
             android:layout_marginEnd="65dp"
-            android:layout_marginBottom="269dp"
+            android:layout_marginBottom="264dp"
             android:fontFamily="sans-serif-black"
-            android:text="23 000 zł"
             android:textAlignment="center"
             android:textColor="#B5A9A9"
             android:textSize="60sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

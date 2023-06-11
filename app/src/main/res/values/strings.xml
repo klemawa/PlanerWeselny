@@ -23,18 +23,18 @@
     <string name="button_13">Button 13</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="textankieta">Wypełnij Ankietę</string>
-    <string name="checkbox">Czy miałaś cos pożyczonego na ślubie</string>
-    <string name="checkbox2">Czy miałaś coś niebieskiego na ślubie i weselu</string>
-    <string name="checkbox3">Czy miałaś zawieszki/naklejki na butelki</string>
-    <string name="checkbox4">Czy miałaś plan stołów na sali weselnej</string>
-    <string name="checkbox5">Czy miałaś księge gości</string>
-    <string name="checkbox6">Podwiązka ślubna - Czy zdecydowałaś sie na ten dodatek?</string>
+    <string name="checkbox">Miałam coś pożyczonego na ślubie</string>
+    <string name="checkbox2">Miałam coś niebieskiego na ślubie i weselu</string>
+    <string name="checkbox3">Miałam zawieszki/naklejki na butelki</string>
+    <string name="checkbox4">Miałam plan stołów na sali weselnej</string>
+    <string name="checkbox5">Miałam księgę gości</string>
+    <string name="checkbox6">Podwiązka ślubna - Zdecydowałam się na ten dodatek</string>
     <string name="buttonglosuj">Zapisz</string>
     <string name="text">Określ budżet</string>
     <string name="listagosci">Lista Gości</string>
     <string name="listagosci2">Dodaj gości</string>
     <string name="listazadan">Lista zadań</string>
-    <string name="imie">Imię</string>
+    <string name="imie">Imię i Nazwisko</string>
     <string name="nazwisko">Nazwisko</string>
     <string name="osobatow">Osoba towarzysząca</string>
     <string name="dod">Dodaj zadanie</string>
@@ -45,4 +45,8 @@
     <string name="notki">Dodaj notatkę</string>
     <string name="NEXT">NEXT</string>
     <string name="POP">PREVIOUS</string>
+    <string name="stol">Podaj numer stołu</string>
+    <string name="stol2">Organizuj stoły</string>
+    <string name="bud">Podaj budżet </string>
+
 </resources>
