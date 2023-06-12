@@ -10,44 +10,63 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Budzet extends AppCompatActivity {
 
-    private EditText editText;
+    private EditText editTextNumber;
+    private EditText editTextExpense;
     private SharedPreferences sharedPreferences;
     private Button button31;
     private TextView textView;
     private String previousValue = "";
     private String hint;
+    private Button buttonAddExpense;
+    private double budzet = 0.0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budzet);
         sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-        editText = findViewById(R.id.editTextTextPersonName);
+        editTextNumber = findViewById(R.id.editTextNumber);
+        editTextExpense = findViewById(R.id.editTextNumber2);
         button31 = findViewById(R.id.button31);
         textView = findViewById(R.id.textView13);
+        buttonAddExpense = findViewById(R.id.button42);
         hint = "Podaj budżet";
         // Przywrócenie poprzedniej wartości z SharedPreferences
         String previousValue = sharedPreferences.getString("previousValue", "");
         textView.setText(previousValue + " zł");
-        editText.setText(previousValue);
+        editTextNumber.setText(previousValue);
 
         button31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String input = editText.getText().toString();
-                if (!input.equals(previousValue)){
-                    String newValue = input + " zł";
-                    textView.setText(newValue);
+                String input = editTextNumber.getText().toString();
+                if (!input.isEmpty()) {
+                    budzet = Double.parseDouble(input);
+                    String newValue = String.format("%.2f", budzet);
+                    textView.setText(newValue + " zł");
 
-                    // Zapisanie nowej wartości do SharedPreferences
                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("previousValue", input);
+                    editor.putString("previousValue", newValue);
                     editor.apply();
 
-                    editText.setText("");
-                    editText.setHint(hint);
+                    editTextNumber.setText("");
+                }
+            }
+        });
+        buttonAddExpense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String input = editTextExpense.getText().toString();
+                if (!input.isEmpty()) {
+                    double wydatek = Double.parseDouble(input);
+                    budzet -= wydatek;
+                    String newValue = String.format("%.2f", budzet);
+                    textView.setText(newValue + " zł");
+
+                    editTextExpense.setText("");
                 }
             }
         });

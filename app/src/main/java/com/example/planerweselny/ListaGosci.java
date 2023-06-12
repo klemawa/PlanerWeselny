@@ -23,6 +23,13 @@ public class ListaGosci extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private ArrayList<String> namesList;
 
+
+    private void openListViewActivity() {
+        Intent intent = new Intent(ListaGosci.this, dodajStol.class);
+        intent.putStringArrayListExtra("guestList", namesList);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +66,13 @@ public class ListaGosci extends AppCompatActivity {
 
             checkboxContainer.addView(rowLayout);
         }
+        Button listViewButton = findViewById(R.id.floatingActionButton);
+        listViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openListViewActivity();
+            }
+        });
     }
 
     private CheckBox createCompanionCheckBox(String name) {

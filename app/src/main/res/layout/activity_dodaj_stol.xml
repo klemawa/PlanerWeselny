@@ -14,30 +14,14 @@
         android:layout_marginStart="67dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="66dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/stol"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/checkboxContainer3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
         tools:ignore="TouchTargetSizeCheck" />
-
-    <LinearLayout
-        android:id="@+id/checkboxContainer3"
-        android:layout_width="278dp"
-        android:layout_height="212dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="18dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button41"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"></LinearLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup8"
@@ -116,7 +100,7 @@
         android:layout_height="52dp"
         android:layout_marginStart="52dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginBottom="352dp"
         android:background="#278E7ABA"
         android:text="@string/buttonglosuj"
         android:textSize="16sp"
@@ -124,5 +108,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="274dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="66dp"
+        android:ems="10"
+        android:hint="Podaj gości "
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="268dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="174dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button41" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -15,35 +17,19 @@ import java.util.Set;
 
 public class dodajStol extends AppCompatActivity {
 
-    private LinearLayout checkboxContainer3;
-    private SharedPreferences sharedPreferences;
-    private ArrayList<String> namesList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dodaj_stol);
-        checkboxContainer3 = findViewById(R.id.checkboxContainer3);
-        sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        namesList = new ArrayList<>();
 
-        loadSavedNames();
+        ListView listView = findViewById(R.id.listView);
 
-        for (String name : namesList) {
-            CheckBox checkBox = createCheckBox(name);
-            checkboxContainer3.addView(checkBox);
-        }
+        ArrayList<String> guestList = getIntent().getStringArrayListExtra("guestList");
 
-    }
-    private CheckBox createCheckBox(String name) {
-        CheckBox checkBox = new CheckBox(this);
-        checkBox.setText(name);
-        checkBox.setChecked(false);
-        return checkBox;
-    }
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, guestList);
+        listView.setAdapter(adapter);
 
-    private void loadSavedNames() {
-        Set<String> namesSet = sharedPreferences.getStringSet("names", new HashSet<>());
-        namesList.addAll(namesSet);
     }
 
     public void przejscieOdliczaj(View v){ //przejście przyciskiem do okna home

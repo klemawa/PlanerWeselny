@@ -55,7 +55,7 @@
     <string name="Etap4">Etap 4</string>
     <string name="Etap5">Etap 5</string>
     <string name="dzienslubu">Dzień Ślubu</string>
-    <string name="Poślubie">Po ślubie</string>
+    <string name="Poslubie">Po ślubie</string>
     <string name="dokumentyk">Dokumenty do ślubu konkordatowego</string>
     <string name="dokc">Dokumenty do ślubu cywilnego</string>
     <string name="etap1a">Wybrać termin wesela i rodzaj ślubu</string>
@@ -129,7 +129,7 @@
 
     <string name="Etap6o">Uregulować kwestie finansowe z usługodawcami</string>
     <string name="Etap6p">Wymiana dowodu osobistego, prawa jazdy oraz paszport</string>
-    <string name="Etap6r"> </string>
+
 
     <string name="dok1aa">Dowody osobiste narzeczeństwa</string>
     <string name="dok1a">Dowody osobiste świadków</string>
@@ -146,6 +146,9 @@
     <string name="dok2a">Dowody osobiste świadków</string>
     <string name="dok2b">Skrócone odpisy aktów urodzenia</string>
     <string name="dok2c">Zaświdczenie o braku okoliczności wykluczenia zawarcia związku</string>
+
+    <string name="budzet2">Dodaj wydatek</string>
+
 
 
 </resources>
