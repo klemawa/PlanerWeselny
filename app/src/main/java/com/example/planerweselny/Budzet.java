@@ -23,6 +23,10 @@ public class Budzet extends AppCompatActivity {
     private String hint;
     private Button buttonAddExpense;
     private double budzet = 0.0;
+
+    private static final String PREF_PREVIOUS_VALUE = "previousValue";
+    private static final String PREF_BUDZET = "budzet";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +53,8 @@ public class Budzet extends AppCompatActivity {
                     textView.setText(newValue + " zł");
 
                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("previousValue", newValue);
+                    editor.putString(PREF_PREVIOUS_VALUE, newValue);
+                    editor.putFloat(PREF_BUDZET, (float) budzet);
                     editor.apply();
 
                     editTextNumber.setText("");
@@ -65,6 +70,10 @@ public class Budzet extends AppCompatActivity {
                     budzet -= wydatek;
                     String newValue = String.format("%.2f", budzet);
                     textView.setText(newValue + " zł");
+
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putFloat(PREF_BUDZET, (float) budzet);
+                    editor.apply();
 
                     editTextExpense.setText("");
                 }
