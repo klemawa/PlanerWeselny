@@ -39,9 +39,6 @@
             android:name=".PlanStolow"
             android:exported="false" />
         <activity
-            android:name=".UstawieniaActivity"
-            android:exported="false" />
-        <activity
             android:name=".KontoActivity"
             android:exported="false" />
         <activity

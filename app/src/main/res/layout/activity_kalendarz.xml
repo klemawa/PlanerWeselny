@@ -74,7 +74,8 @@
             android:layout_width="75dp"
             android:layout_height="match_parent"
             android:onClick="nextMonth"
-            android:text="@string/NEXT" />
+            android:text="@string/NEXT"
+            tools:ignore="TextSizeCheck" />
 
     </LinearLayout>
 

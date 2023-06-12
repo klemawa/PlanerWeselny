@@ -27,13 +27,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
+import java.util.Locale;
+
 public class KalendarzActivity extends AppCompatActivity {
+    private static final int REQUEST_DATE = 1;
 
     private CalendarAdapter calendarAdapter;
     private TextView monthTextView;
     private int selectedDay = -1;
     private SharedPreferences sharedPreferences;
     private ArrayAdapter<String> eventListAdapter;
+    private int selectedDayIndex = -1;
+    private int selectedDay2 = -1;
+    private int selectedMonth2 = -1;
+    private int selectedYear2 = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +67,49 @@ public class KalendarzActivity extends AppCompatActivity {
                 Toast.makeText(KalendarzActivity.this, event, Toast.LENGTH_SHORT).show();
             }
         });
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            selectedDay2 = extras.getInt("selectedDay2", -1);
+            selectedMonth2 = extras.getInt("selectedMonth2", -1);
+            selectedYear2 = extras.getInt("selectedYear2", -1);
+        }
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_DATE && resultCode == RESULT_OK) {
+            int selectedDay = data.getIntExtra("day", -1);
+            int selectedMonth = data.getIntExtra("month", -1);
+            int selectedYear = data.getIntExtra("year", -1);
+
+            if (selectedDay != -1 && selectedMonth != -1 && selectedYear != -1) {
+                // Zapisz datę w kalendarzu
+                saveDate(selectedDay, selectedMonth, selectedYear);
+            }
+        }
+    }
+    private void saveDate(int day, int month, int year) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        String dateKey = String.format(Locale.getDefault(), "%02d-%02d-%04d", day, (month + 1), year);
+
+        String previousDateKey = sharedPreferences.getString("selected_date", "");
+        if (!previousDateKey.isEmpty()) {
+            editor.remove(previousDateKey);
+        }
+        editor.putString(dateKey, "Wybrana data");
+        editor.putString("selected_date", dateKey);
+        editor.apply();
+        calendarAdapter.notifyDataSetChanged();
+
+        Toast.makeText(this, "Data zapisana dla: " + dateKey, Toast.LENGTH_SHORT).show();
     }
 
+    public void openDatePicker(View view) {
+        Intent intent = new Intent(this, KontoActivity.class);
+        startActivityForResult(intent, REQUEST_DATE);
+    }
     private void updateMonthTextView() {
         DateFormatSymbols symbols = new DateFormatSymbols();
         String monthName = symbols.getMonths()[calendarAdapter.getMonth()];
@@ -124,6 +172,7 @@ public class KalendarzActivity extends AppCompatActivity {
                 dayOfMonth = (TextView) convertView;
             }
 
+
             if (position < getStartDay()) {
                 dayOfMonth.setBackgroundColor(Color.GRAY);
                 dayOfMonth.setTextColor(Color.WHITE);
@@ -133,6 +182,23 @@ public class KalendarzActivity extends AppCompatActivity {
                 dayOfMonth.setBackgroundColor(Color.GRAY);
                 dayOfMonth.setTextColor(Color.BLACK);
                 dayOfMonth.setText(String.valueOf(day));
+
+                int selectedDay2 = KalendarzActivity.this.selectedDay2;
+                int selectedMonth2 = KalendarzActivity.this.selectedMonth2;
+                int selectedYear2 = KalendarzActivity.this.selectedYear2;
+
+
+                if (day == selectedDay2 && month == selectedMonth2 && year == selectedYear2) {
+                    dayOfMonth.setBackgroundColor(Color.BLUE);
+                    dayOfMonth.setTextColor(Color.BLACK);
+                } else if (position == selectedDayIndex) {
+                    dayOfMonth.setBackgroundColor(Color.BLUE);
+                    dayOfMonth.setTextColor(Color.BLACK);
+                } else {
+                    dayOfMonth.setBackgroundColor(Color.GRAY);
+                    dayOfMonth.setTextColor(Color.BLACK);
+                }
+
 
                 if (day == currentDayOfMonth && month == calendar.get(Calendar.MONTH) && year == calendar.get(Calendar.YEAR)) {
                     dayOfMonth.setBackgroundColor(Color.MAGENTA);
@@ -153,9 +219,11 @@ public class KalendarzActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         selectedDay = day;
+                        selectedDayIndex = position;
                         notifyDataSetChanged();
                         showInputDialog();
                     }
+
                 });
             }
 
@@ -177,6 +245,7 @@ public class KalendarzActivity extends AppCompatActivity {
                 month--;
             }
             daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+            selectedDayIndex = -1;
             notifyDataSetChanged();
         }
 
@@ -188,6 +257,7 @@ public class KalendarzActivity extends AppCompatActivity {
                 month++;
             }
             daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+            selectedDayIndex = -1;
             notifyDataSetChanged();
         }
 
@@ -233,7 +303,7 @@ public class KalendarzActivity extends AppCompatActivity {
                 String updatedInfo = existingInfo.isEmpty() ? newInfo : existingInfo + ", " + newInfo;
                 existingInfoTextView.setText(updatedInfo);
 
-                // Zapisanie informacji w SharedPreferences
+                // Zapisanie informacji w SharedPreferences dla aktualnie zaznaczonej daty
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString(String.valueOf(selectedDay), updatedInfo);
                 editor.apply();

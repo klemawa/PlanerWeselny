@@ -48,5 +48,104 @@
     <string name="stol">Podaj numer stołu</string>
     <string name="stol2">Organizuj stoły</string>
     <string name="bud">Podaj budżet </string>
+    <string name="kon">Wybierz twój wielki dzień</string>
+    <string name="Etap1">Etap 1</string>
+    <string name="Etap2">Etap 2</string>
+    <string name="Etap3">Etap 3</string>
+    <string name="Etap4">Etap 4</string>
+    <string name="Etap5">Etap 5</string>
+    <string name="dzienslubu">Dzień Ślubu</string>
+    <string name="Poślubie">Po ślubie</string>
+    <string name="dokumentyk">Dokumenty do ślubu konkordatowego</string>
+    <string name="dokc">Dokumenty do ślubu cywilnego</string>
+    <string name="etap1a">Wybrać termin wesela i rodzaj ślubu</string>
+    <string name="Etap1b">Ustalić charakter imprezy - całonocne wesele z poprawinami lub kameralne przyjęcie</string>
+    <string name="Etap1c">Określić planowaną liczbę gości</string>
+    <string name="Etap1d">Okreśłić wstępny budżet weselny</string>
+    <string name="Etap1e">Wybrać kościół, USC lub miejsce na ślub plenerowy</string>
+    <string name="Etap1f">Wybrać salę weselną i zarezerwować termin</string>
+    <string name="Etap1g">Wybrać miejsce na organizację poprawin</string>
+    <string name="Etap1h">Stworzyć stronę weselną</string>
+
+    <string name="etap2a">Rozpocząć poszukiwania sukni ślubnej</string>
+    <string name="Etap2b">Zarezerwować datę oraz godzine ślubu wkościele</string>
+    <string name="Etap2c">Zapisać sie na nauki przedmałżeńskie</string>
+    <string name="Etap2d">Wybrać świadków i zapytać ich o zgodę</string>
+    <string name="Etap2e">Wybrać i zarezerwować fotografa</string>
+    <string name="Etap2f">Wybrać i zarezerwować kamerzystę</string>
+    <string name="Etap2g">Wybrać i zarezerwować DJ/zespół muzyczny</string>
+    <string name="Etap2h">Wybrać i zarezerwować firmę dekoratorską</string>
+    <string name="Etap2i">Wybrac i zarezerwować oprawę muzyczną ślubu</string>
+    <string name="Etap2j">Kupić buty dla panny młodej</string>
+    <string name="Etap2k">Kupić bieliznę ślubną</string>
+    <string name="Etap2l">Kupić garnitur</string>
+
+    <string name="Etap3a">Kupić obrączki ślubne</string>
+    <string name="Etap3b">Określić ostateczną liczbę gości</string>
+    <string name="Etap3c">Ustalić kolor przewodni wesela</string>
+    <string name="Etap3d">Zamówić zaproszenia ślubne</string>
+    <string name="Etap3e">Wybrać i zarezerwować samochód do ślubu</string>
+    <string name="Etap3f">Zarezerwować termin u makijażystki</string>
+    <string name="Etap3g">Zarezerwowac termin u fryzjerki</string>
+    <string name="Etap3h">Wybrać dodatkowe atrakcje podczas wesela</string>
+    <string name="Etap3i">Umówić sie na sesje narzeczeńską</string>
+
+    <string name="Etap4a">Rozdać zaproszenia</string>
+    <string name="Etap4b">Ustalić listę utworów weselnych</string>
+    <string name="Etap4c">Wybrać piosenkę na pierwszy taniec</string>
+    <string name="Etap4d">Rozpocząć kurs tańca dla narzeczonych</string>
+    <string name="Etap4e">Ustalić menu weselne</string>
+    <string name="Etap4f">Usatlić z dekoratorką szczegóły dotyczące bukietu ślubnego</string>
+    <string name="Etap4g">Usatlić z dekoratorka szczegóły dotyczące dekoracji kościoła, urzędu i sali</string>
+    <string name="Etap4h">Usatlić scenariusz wesela(która godzina rozpoczęcia, kiedy pierwszy taniec itp.</string>
+    <string name="Etap4i">Ustalić konkursy i zabaway</string>
+
+    <string name="Etap4j">Umówić sie na próbny makijaż oraz fryzurę</string>
+    <string name="Etap4k">Wybrac ozdoby do włosów</string>
+    <string name="Etap4l">Kupić biżuterię ślubną</string>
+    <string name="Etap4m">Wybrac dodatki slubne pana młodego</string>
+    <string name="Etap4n">Zaplanować podróż poślubną</string>
+    <string name="Etap4o">Wybrac sukienkę na poprawiny</string>
+    <string name="Etap4p">Wybrac dekoracje samochodu do ślubu</string>
+    <string name="Etap4r">Zaplanować błogosławiństwo pary młodej</string>
+
+    <string name="Etap5a">Potwierdzić ostateczną liczbę gości, w tym dzieci</string>
+    <string name="Etap5b">Zarezerwować transport dla gości weselnych</string>
+    <string name="Etap5c">Usatlić ile gości potrzebuje noclegu i zarezerwować pokoje</string>
+    <string name="Etap5d">Kupić alkohol jeśli nie ma go w ofercie sali weselnej</string>
+    <string name="Etap5e">Ustalić usadzenie gości weselnych</string>
+    <string name="Etap5f">Przekazać managerowi sali weselnej winietki oraz plan usadzenia gości</string>
+    <string name="Etap5g">Wybrać podziękowania dla rodziców</string>
+    <string name="Etap5h">Wybrac podziękowania dla gości weselnych</string>
+    <string name="Etap5i">Ustalić przebieg dnia ślubu</string>
+    <string name="Etap5j">Poinformować o urlopie w pracy</string>
+    <string name="Etap5k">Skompletować koszyk ratunkowy</string>
+
+    <string name="Etap6j">odebrać bukiet ślubny</string>
+    <string name="Etap6k">Odebrać samochód do ślubu</string>
+    <string name="Etap6l">Zabrać obrączki ślubne</string>
+    <string name="Etap6m">Spakować do kosmetyczki:igłę z nitką, agrafkę, kosmetyczkę,buty na zmianę</string>
+    <string name="Etap6n">Ustalic kto będzie odpowiedzialnyza prezenty gości</string>
+
+    <string name="Etap6o">Uregulować kwestie finansowe z usługodawcami</string>
+    <string name="Etap6p">Wymiana dowodu osobistego, prawa jazdy oraz paszport</string>
+    <string name="Etap6r"> </string>
+
+    <string name="dok1aa">Dowody osobiste narzeczeństwa</string>
+    <string name="dok1a">Dowody osobiste świadków</string>
+    <string name="dok1b">Metryki chrztu</string>
+    <string name="dok1c">Zaświadczenie o bierzmowaniu</string>
+    <string name="dok1d">Świadectwo nauki religii</string>
+    <string name="dok1e">Licencja - zgody proboszczów na ślub</string>
+    <string name="dok1f">Potwierdzenie odbycia nauk przedmałżeńskich</string>
+    <string name="dok1g">Zaświadczenie o wygłoszeniu zapowiedzi</string>
+    <string name="dok1h">Zaświadczenie o odbyciu spowiedzi</string>
+    <string name="dok1i">Zaświadczenie  z USC o braku okoliczności wykluczenia zawarcia związku</string>
+
+    <string name="dok2">Dowody osobiste narzeczeństwa</string>
+    <string name="dok2a">Dowody osobiste świadków</string>
+    <string name="dok2b">Skrócone odpisy aktów urodzenia</string>
+    <string name="dok2c">Zaświdczenie o braku okoliczności wykluczenia zawarcia związku</string>
+
 
 </resources>
